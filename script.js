@@ -128,3 +128,13 @@ gsap.from("#contact",{
         scroller:"body",
     }
 })
+
+function sendEmail() {
+    let params = {
+      name : document.getElementById("name").value,
+      email : document.getElementById("email").value,
+      message : document.getElementById("message").value
+    }
+ 
+    emailjs.send("arpit267", "template_dbd0uwx", params).then(alert("Your message has been sent successfully!"))
+}   

@@ -16,7 +16,16 @@
     <!-- GSAP Link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+   <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "HWVsMSJMf7ORme7uY",
+          });
+        })();
+</script>
 </head>
 
 <body>
@@ -40,7 +49,7 @@
                     <h2>Hello there!</h2>
                     <h1>I'm <span>Arpit</span></h1>
                     <h2>A <span class="multiple-text"></span></h2>
-                    <a href="" style="color: white;" class="btn btn-2">Download CV</a>
+                    <a href="Arpit_Shukla resume.docx" style="color: white;" class="btn btn-2">Download CV</a>
                 </div>
             </div>
         </div>
@@ -154,14 +163,14 @@
                 <div class="social-icons">
                     <a href="https://github.com/arpitshukla267"><i class="fa-brands fa-github"></i></a>
                 </div>
-                <a href=""class="btn btn-2">Download CV</a>
+                <a href="Arpit_Shukla resume.docx"class="btn btn-2">Download CV</a>
             </div>
             <div class="contact-right">
                 <form id="contact-form" method="post" action="mailto:shuklaarpit440@gmail.com">
                     <input type="text" id="Name" name="Name" placeholder="Your Name" required>
                     <input type="email" id="Email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" id="Message" cols="30" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn-2">Submit</button>
+                    <button type="submit" onclick="sendEmail()" class="btn btn-2">Submit</button>
                 </form>
                 <span id="msg"></span>
             </div>
