@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/9af29e1507.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- GSAP Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <div id="header">
+        <nav class="nav">
+            <span class="logo">ARPIT</span>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#sevices">Expertise</a></li>
+                <li><a href="#portfolio">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark fas" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars fas"onclick="openmenu()"></i>
+        </nav>
+        
+        <div class="container">
+            <div class="hero">
+                <div class="header-text">
+                    <h2>Hello there!</h2>
+                    <h1>I'm <span>Arpit</span></h1>
+                    <h2>A <span class="multiple-text"></span></h2>
+                    <a href="" style="color: white;" class="btn btn-2">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ABOUT SECTION -->
+    <div id="about">
+        <div class="about-container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/mf-avatar.svg" alt="User Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> Enthusiastic and detail-oriented web developer with a strong foundation in front-end technologies. </p>
+                        Eager to contribute creativity, a strong work ethic, and a passion for continuous learning to a static web development role. 
+                        <p>Proficient in translating business requirements into effective and user-friendly web solutions. Adept at collaborating with cross-functional teams to drive project success. Skilled in responsive design, performance optimization, and the integration
+                        of third-party APIs</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skill')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skill">
+                        <ul>
+                            <li><span>UI/UX Designer</span><br>Designing User freindly Interfaces</li>
+                            <li><span>Frontend Development</span><br>Bringing Imagination to the Screen</li>
+                            <li><span>Web Development</span><br>Creating fully functional Web-Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.Tech(U.G)</span><br>From AKTU</li>
+                            <li><span>12</span><br>CBSE</li>
+                            <li><span>10</span><br>CBSE</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES SECTION -->
+
+    <div id="sevices">
+        <div class="container">
+            <h1 class="sub-title">My Expertise</h1>
+            <div class="services-list">
+                <div class="service">
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Frontend Designing</h2>
+                    <p>Passionate about UI/UX and responsive Frontend. With strong foundation in HTML, CSS, JS, React and Tailwind CSS.</p>
+                </div>
+                <!-- <div class="service">
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Backend Dev</h2>
+                    <p>Skilled in developing hybrid and cross-platform backend using Node.js and express. Also familiar with MongoDB for database designing and database interactions. </p>
+                </div> -->
+                <div class="service">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Software Development</h2>
+                    <p>Experienced in both functional and OOP: C, C++, JavaScript.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- PORTFOLIO SECTION -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/work-1.png" alt="work-1" >
+                    <div class="layer">
+                        <h3>Attio</h3>
+                        <p>An applications which build the CRM for the next generation.</p>
+                        <a href=" https://arpitshukla267.github.io/Attio/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/work-2.png" alt="work-2" >
+                    <div class="layer">
+                        <h3>AI Assistant</h3>
+                        <p>An AI Assistant that helps you. </p>
+                        <a href=" https://arpitshukla267.github.io/AI-Assistant/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/work-3.png" alt="work-3" >
+                    <div class="layer">
+                        <h3>Sidcup Golf</h3>
+                        <p>Amazing and exciting golf. </p>
+                        <a href="https://arpitshukla267.github.io/Sid-Cup-Golf/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+
+        </div>
+    </div>
+<!-- Contact Section -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>shuklaarpit440@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+91 6393818467 </p>
+                <div class="social-icons">
+                    <a href="https://github.com/arpitshukla267"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href=""class="btn btn-2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form id="contact-form" method="post" action="mailto:shuklaarpit440@gmail.com">
+                    <input type="text" id="Name" name="Name" placeholder="Your Name" required>
+                    <input type="email" id="Email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" id="Message" cols="30" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn-2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @Arpit Shukla. Made with <i class="fa-solid fa-heart"></i> by Arpit </p>
+    </div>
+</div>
+<script src="index.js"></script>
+
+</body>
+
+</html>
